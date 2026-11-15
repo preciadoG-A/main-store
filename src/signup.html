@@ -9,21 +9,28 @@
 
 <body>
         <h3>Register User Form</h3>
-        <label for="FirstName">First Name:</label> <br>
-        <input type="text"> <br><br>
-        <label for="LastName">Last Name:</label> <br>
-        <input type="text"> <br><br>
-        <label for="identification">Identification:</label> <br>
-        <input type="number"> <br><br
-        <label for="Mobile Phone">Mobile Phone:</label> <br>
-        <input type="number"> <br><br
-        <label for="Email">Email:</label> <br>
-        <input type="email"> <br><br> 
-        <label for="Password">Password:</label> <br>
-        <input type="password"> <br> 
-        <br>
-        <button>Register</button>
-       
+        <form name="register-form" action="signup.php" method="POST">
+          
+            <label for="FirstName">First Name:</label> <br>
+            <input type="text" required name="fname"> <br><br>
+            
+            <label for="LastName">Last Name:</label> <br>
+            <input type="text" required name="lname"> <br><br>
+            
+            <label for="identification">Identification:</label> <br>
+            <input type="number" required name="idnumber"> <br><br>
+            
+            <label for="Mobile Phone">Mobile Phone:</label> <br>
+            <input type="number" required name="mphone"> <br><br>
+            
+            <label for="Email">Email:</label> <br>
+            <input type="email" required name="email"> <br><br> 
+            
+            <label for="Password">Password:</label> <br>
+            <input type="password" required name="pswd"> <br><br>
+           
+            <button>Register</button>
+        </form>
 
 </body>
 
