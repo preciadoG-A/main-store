@@ -1,0 +1,11 @@
+en caso de que no funcione el postgres y toque activarlo manualmente
+debes poner los siguientes codigos en el powershell
+
+cd..
+cd..
+cd '.\Program Files\'
+cd . \PostgreSQL\
+cd 17
+cd bin
+& "C:\Program Files\PostgreSQL\16\bin\pg_ctl.exe" -D "C:\Program Files\PostgreSQL\16\data" start
+

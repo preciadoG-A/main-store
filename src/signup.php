@@ -1,15 +1,32 @@
 <?php
     //get payload from frontend
+    include('../settings/basedata.php');
+
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $idnumber = $_POST['idnumber'];
     $mphone = $_POST['mphone'];
     $email = $_POST['email'];
-    $pswd = $_POST['pswd'];
+    $pswd = MD5($_POST['pswd']);
 
-    echo "<br>" . $fname;
-    echo "<br>" . $lname;
-    echo "<br>" . $idnumber;
-    echo "<br>" . $mphone;
-    echo "<br>" . $email;
-    echo "<br>" . $pswd;
+    //prepary query
+    $sql = "INSERT INTO 
+    users (firstname, lastname, ident_number, mobile_phone, email, password) 
+    VALUES (
+            '$fname',   
+            '$lname',  
+            '$idnumber',    
+            '$mphone',   
+            '$email',   
+            '$pswd')
+    "; 
+;
+
+//excute query
+$res = pg_query($local_conn, $sql);
+
+if ($res) {
+    echo "User has been created successfully!";
+} else {
+    echo "Error registering user hasn't been created successfully!";
+}

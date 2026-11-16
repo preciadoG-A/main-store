@@ -1,3 +1,4 @@
+--create users table
 CREATE TABLE users (
     id            BIGSERIAL     PRIMARY KEY,
     firstname     VARCHAR(100)  NOT NULL,
@@ -13,3 +14,8 @@ CREATE TABLE users (
     updated_at    TIMESTAMPTZ   NOT NULL DEFAULT NOW(),
     deleted_at    TIMESTAMPTZ
 );
+
+--select all users from the users table
+SELECT * FROM users;
+--insert a new user into the users table
+insert into users (firstname,lastname,ident_number,email,password) values ('joan', 'Ayala', '56890988', 'joan@gmail.com', '12346')
