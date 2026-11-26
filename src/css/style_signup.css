@@ -1,0 +1,92 @@
+/* Configuración general y centrado vertical */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Apila el h3 arriba y el formulario abajo */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem; /* Evita que toque los bordes en pantallas pequeñas */
+  background-color: #eef2f6;
+}
+
+/* Título h3 */
+h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Tarjeta del formulario */
+form[name="register-form"] {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px; /* Un poco más ancho que el login por tener más campos */
+  text-align: left;
+}
+
+/* Etiquetas */
+form[name="register-form"] label {
+  display: inline-block;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+/* Campos de texto, número, email y password */
+form[name="register-form"] input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form[name="register-form"] input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Ocultar las flechas internas en los campos type="number" (Identification y Mobile Phone) */
+form[name="register-form"] input[type="number"]::-webkit-inner-spin-button,
+form[name="register-form"] input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Botón Register */
+form[name="register-form"] button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 0.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form[name="register-form"] button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Controla la altura de tus saltos de línea <br> */
+form[name="register-form"] br {
+  line-height: 0.4;
+}

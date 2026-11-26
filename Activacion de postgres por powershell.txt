@@ -4,8 +4,8 @@ debes poner los siguientes codigos en el powershell
 cd..
 cd..
 cd '.\Program Files\'
-cd . \PostgreSQL\
+cd  '.\PostgreSQL\'
 cd 17
 cd bin
-& "C:\Program Files\PostgreSQL\16\bin\pg_ctl.exe" -D "C:\Program Files\PostgreSQL\16\data" start
+& "C:\Program Files\PostgreSQL\17\bin\pg_ctl.exe" -D "C:\Program Files\PostgreSQL\17\data" start
 

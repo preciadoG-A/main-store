@@ -1,0 +1,236 @@
+/* Configuración general */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  background-color: #eef2f6;
+  color: #1e293b;
+}
+
+/* Contenedor principal usando <center> */
+center {
+  background-color: #ffffff;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+/* Título principal */
+center h1 {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Párrafos de estado y modo actual */
+center p {
+  margin: 0 0 1.2rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+center p strong {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* Cambio dinámico de color según el rol en el <body> */
+body.role-administrador center p strong {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+body.role-cliente center p strong {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+/* Formulario de selección de rol */
+form[action="role_access.php"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #f8fafc;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+form[action="role_access.php"] label {
+  font-weight: 600;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+form[action="role_access.php"] select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+form[action="role_access.php"] select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+form[action="role_access.php"] button {
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form[action="role_access.php"] button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Enlaces rápidos de cambio de rol y navegación */
+center > a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+center > a:hover {
+  transform: translateY(-1px);
+}
+
+/* Botón acceso directo Administrador */
+center > a[href="role_access.php?rol=administrador"] {
+  background-color: #10b981;
+  color: #ffffff;
+}
+center > a[href="role_access.php?rol=administrador"]:hover {
+  background-color: #059669;
+}
+
+/* Botón acceso directo Cliente */
+center > a[href="role_access.php?rol=cliente"] {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+center > a[href="role_access.php?rol=cliente"]:hover {
+  background-color: #d97706;
+}
+
+/* Botón Ver lista (Gris neutro) */
+center > a[href="list_users.php"] {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+center > a[href="list_users.php"]:hover {
+  background-color: #cbd5e1;
+}
+
+/* Botón Logout (Rojo) */
+center > a[href="logout.php"] {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+center > a[href="logout.php"]:hover {
+  background-color: #dc2626;
+}
+
+/* Tabla de usuarios (sobrescribiendo border="1") */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none !important;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+table thead th {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 15px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Cambia el color de la cabecera de la tabla si es Administrador */
+body.role-administrador table thead th {
+  background-color: #0f172a;
+}
+
+table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+table tbody td {
+  padding: 12px 15px;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  vertical-align: middle;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+table tbody tr:hover {
+  background-color: #eff6ff;
+}
+
+/* Foto de perfil circular */
+table tbody td:first-child img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #cbd5e1;
+  vertical-align: middle;
+}
+
+table tbody td img {
+  vertical-align: middle;
+}
+
+/* Íconos de acciones */
+.actions-col a {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.actions-col a:hover {
+  background-color: #dbeafe;
+  transform: scale(1.12);
+}

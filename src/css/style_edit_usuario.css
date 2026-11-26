@@ -1,0 +1,154 @@
+/* Configuración general y centrado */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
+  background-color: #eef2f6;
+  color: #1e293b;
+}
+
+/* Título principal */
+h1 {
+  color: #1e293b;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Tarjeta del formulario */
+form[action="update_user.php"] {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+}
+
+/* Etiquetas */
+form[action="update_user.php"] label {
+  display: inline-block;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+/* Campos de texto y correo */
+form[action="update_user.php"] input[type="text"],
+form[action="update_user.php"] input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form[action="update_user.php"] input[type="text"]:focus,
+form[action="update_user.php"] input[type="email"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Sección de Foto actual */
+form[action="update_user.php"] p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+form[action="update_user.php"] img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #cbd5e1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Campo de subida de archivo (JPG o PNG) */
+form[action="update_user.php"] input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  background-color: #f8fafc;
+  border: 1px dashed #94a3b8;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+form[action="update_user.php"] input[type="file"]::file-selector-button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  background-color: #e2e8f0;
+  color: #334155;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form[action="update_user.php"] input[type="file"]::file-selector-button:hover {
+  background-color: #cbd5e1;
+}
+
+/* Botón Guardar */
+form[action="update_user.php"] button[type="submit"] {
+  display: inline-block;
+  width: 48%;
+  padding: 11px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form[action="update_user.php"] button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+/* Enlace Cancelar estilizado como botón secundario */
+form[action="update_user.php"] a[href="list_users.php"] {
+  display: inline-block;
+  width: 48%;
+  float: right;
+  padding: 11px;
+  background-color: #e2e8f0;
+  color: #334155;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+form[action="update_user.php"] a[href="list_users.php"]:hover {
+  background-color: #cbd5e1;
+}
+
+/* Controla el espacio de tus saltos de línea <br> */
+form[action="update_user.php"] br {
+  line-height: 0.4;
+}

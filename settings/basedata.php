@@ -3,7 +3,7 @@
 /* to test conection, please go to  
 http://localhost/main-store/settings/basedata.php
 */
-
+/*
 // local concection
 $local_host = "localhost";
 $local_port = 5432;
@@ -20,6 +20,7 @@ $local_conn= pg_connect("
         password=$local_password"
     );
 
+*/
 
 // supa concection
 $supa_host = "aws-1-us-west-2.pooler.supabase.com";
@@ -29,7 +30,7 @@ $supa_user = "postgres.unqionzoeccefyghhjxr";
 $supa_password = "main-store@@";
 
 
-$supa_conn = pg_connect("
+$local_conn = pg_connect("
         host=$supa_host 
         port=$supa_port  
         dbname=$supa_dbname    
@@ -37,17 +38,17 @@ $supa_conn = pg_connect("
         password=$supa_password"
     );
     
-
+/*
     // local connection
 if (!$local_conn) {
     die("Error conection");}
 else {
-    echo "success database local Connection!!! ";
+    //echo "success database local Connection!!! ";
 }
-
-if (!$supa_conn) {
+*/
+if (!$local_conn) {
     die("Error conection");}
 else {
-    echo "<br> success database supa Connection!!! ";
+    //echo "<br> success database local Connection!!! ";
 }
 ?>
